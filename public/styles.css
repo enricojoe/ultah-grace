@@ -241,7 +241,7 @@ input[type="text"] {
 /*IMAGE*/
 .mySlides {display: none;}
 .mySlides img {
-  height: 250px;
+  height: 200px;
 }
 
 /* Slideshow container */
