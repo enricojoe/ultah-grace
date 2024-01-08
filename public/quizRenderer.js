@@ -73,10 +73,7 @@ function loadQuestion(questionNum) {
             // since particles fall down, start a bit higher than random
             confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
             confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
-          }, 250);
-          let lagu = new Audio('./data/audio/lagu.mp3');
-          console.log(lagu);
-          lagu.play();`)
+          }, 250);`)
       scrpt.appendChild(node);
       congratsElement.appendChild(scrpt);
     }else{
@@ -86,7 +83,7 @@ function loadQuestion(questionNum) {
     nextBtn.classList.add("hide");
     questionElement.classList.add("hide");
     answersContainer.classList.add("hide");
-    startBtn.innerHTML = "Restart";
+    startBtn.innerHTML = "Ulang";
     correctCount.innerHTML = `Benar: ${correct}/${questions.length}`;
     correct = 0;
     currentQuestion = 0;
@@ -183,14 +180,18 @@ const overlay = document.querySelector(".overlay");
 const openModalBtn = document.querySelector(".btn-open");
 const closeModalBtn = document.querySelector(".btn-close");
 
+let lagu = new Audio('./data/audio/lagu.mp3');
+
 openModalBtn.addEventListener("click", () => {
   modalContainer.classList.remove("hidden");
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
+  lagu.play();
 });
 
 closeModalBtn.addEventListener("click", () => {
   modalContainer.classList.add("hidden");
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
+  lagu.pause();
 });

@@ -28,7 +28,7 @@ const quizData = {
   Selamat Mengerjakan...`
 };
 
-const questions = [
+const questionss = [
   {
     text: "Kapan Anda dilahirkan?",
     type: "mc",
@@ -39,26 +39,111 @@ const questions = [
       { text: "09 Januari 2001", correct: false }
     ]
   },
-  // {
-  //   text: "Kapan Enrico dilahirkan?",
-  //   type: "mc",
-  //   answers: [
-  //     { text: "20 Oktober 2000", correct: true },
-  //     { text: "21 November 2001", correct: false },
-  //     { text: "20 Oktober 2001", correct: false },
-  //     { text: "Lupa...", correct: false }
-  //   ]
-  // },
-  // {
-  //   text: "Kapan kita jadian? (Gunakan format DD-MM-YYYY)",
-  //   type: "txt",
-  //   answers: ["20-02-2020"]
-  // },
-  // {
-  //   text: "Berapa selisih umur anda dengan Enrico? (Dalam hari)",
-  //   type: "txt",
-  //   answers: ["80", "80 hari"]
-  // }
+  {
+    text: "Kapan Enrico dilahirkan?",
+    type: "mc",
+    answers: [
+      { text: "20 Oktober 2000", correct: true },
+      { text: "21 November 2001", correct: false },
+      { text: "20 Oktober 2001", correct: false },
+      { text: "Lupa...", correct: false }
+    ]
+  },
+  {
+    text: "Kapan kita jadian? (Gunakan format DD-MM-YYYY)",
+    type: "txt",
+    answers: ["20-02-2020"]
+  },
+  {
+    text: "Berapa selisih umur anda dengan Enrico? (Dalam hari)",
+    type: "txt",
+    answers: ["80", "80 hari"]
+  },
+  {
+    text: "Apa warna kesukaan Enrico?",
+    type: "txt",
+    answers: ["biru", "merah"]
+  },
+  {
+    text: "Sudah berapa kali anda ke Propau?",
+    type: "txt",
+    answers: ["2 kali", "2", "dua"]
+  },
+  {
+    text: "Buah buah apa yang belum pasti?",
+    type: "mc",
+    answers: [
+      { text: "Duren", correct: false },
+      { text: "Dugan", correct: true },
+      { text: "Singkong", correct: false },
+      { text: "Apel", correct: false }
+    ]
+  },
+  {
+    text: "Berapa tinggi Enrico?",
+    type: "mc",
+    answers: [
+      { text: "170 CM", correct: true },
+      { text: "169 CM", correct: false },
+      { text: "174 CM", correct: false },
+      { text: "175 CM", correct: false }
+    ]
+  },
+  {
+    text: "Film apa yang terakhir kali Enrico sarankan tonton tapi belum ditonton?",
+    type: "mc",
+    answers: [
+      { text: "The Butterfly Effect", correct: false },
+      { text: "Mr. Nobody", correct: true },
+      { text: "Inception", correct: false },
+      { text: "Back to The Future", correct: false }
+    ]
+  },
+  {
+    text: "Yang mana yang bukan merupakan dekan di ITERA?",
+    type: "mc",
+    answers: [
+      { text: "Arif Rohman, S.T.,M.T.", correct: false },
+      { text: "Dr. Ikah Ning Prasetiowati Permanasari, S.Si., M.Si.", correct: false },
+      { text: "Hadi Teguh Yudistira, S.T., Ph.D.", correct: false },
+      { text: "Dr. Tarmizi Taher, S.Si.", correct: true }
+    ]
+  },
+  {
+    text: "Siapa nama baptis Enrico?",
+    type: "txt",
+    answers: ["ignasius"]
+  },
+  {
+    text: "Berapa jumlah gereja yang sudah kita kunjungi selama di Lamsel?",
+    type: "mc",
+    answers: [
+      { text: "3", correct: false },
+      { text: "4", correct: false },
+      { text: "5", correct: true },
+      { text: "Lupa...", correct: false }
+    ]
+  },
+  {
+    text: "Berapa umur dari Prof. Dr. I Nyoman Pugeg Aryantha?",
+    type: "txt",
+    answers: ["58 tahun", "58"]
+  },
+  {
+    text: "Pada tahun berapa Indonesia mencapai tahun Emas (100 Tahun)?",
+    type: "txt",
+    answers: ["2045"]
+  },
+  {
+    text: "Apa merk motor yang dimiliki Enrico?",
+    type: "mc",
+    answers: [
+      { text: "Suzuki", correct: false },
+      { text: "Honda", correct: false },
+      { text: "Yamaha", correct: true },
+      { text: "Verza", correct: false }
+    ]
+  }
 ];
 
 const shuffle = (array) => { 
@@ -68,6 +153,7 @@ const shuffle = (array) => {
   } 
   return array; 
 }; 
-const questionss = shuffle(questions);
 
-module.exports = { quizData, questionss };
+const questions = shuffle(questionss).slice(-10);
+
+module.exports = { quizData, questions };

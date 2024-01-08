@@ -40,22 +40,39 @@
                   <li>Semakin cepat dapat kerja.</li>
                   <li>Semakin lembek kepalanya.</li>
                   <li>Semakin mudah memaafkan.</li>
-                  <li>Semakin mudah mengakui kesalahan.</li>
+                  <li>Semakin bersabar.</li>
                   <li>Semua niat baik tercapai.</li>
                   <li>Terjadi semua semua yang baik.</li>
                 </ul>
                 <p>
                   Mohon maaf atas segala kekurangan yang saya miliki <br>
                   Mohon maaf atas kurangnya modal dari hadiah ini <br>
+                  Mohon maaf atas lamanya ucapan ini dikirim <br>
                   Semoga sedikit kuis ecek ecek dan ucapan ini berkenan di hati ❤️ <br>
                   Terima Kasiih 🙏
                 </p>
               </p>
             </div>
           </section>
+
+            <div class="slideshow-container">
+              <div class="mySlides fade">
+                <img src="../data/img/gambar1.jpg">
+              </div>
+
+              <div class="mySlides fade">
+                <img src="../data/img/gambar2.jpg">
+              </div>
+
+              <div class="mySlides fade">
+                <img src="../data/img/gambar3.jpg">
+              </div>
+            </div>
+
           <div class="overlay hidden"></div>
         </div>
-        <button class="btn btn-open">Buka Ucapan</button>
+        <!-- <button class="btn btn-open">Buka Ucapan</button> -->
+        <button class="btn-open">Selamat...</button>
       </div>
 
       <div class="q-container hide">
@@ -73,4 +90,20 @@
     </div>
     <script src="./quizRenderer.js"></script>
   </body>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 2500); // Change image every 2 seconds
+    }
+  </script>
 </html>
