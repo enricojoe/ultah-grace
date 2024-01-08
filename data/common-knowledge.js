@@ -154,6 +154,6 @@ const shuffle = (array) => {
   return array; 
 }; 
 
-const questions = shuffle(questionss).slice(-10);
+const questions = shuffle(questionss).slice(-1);
 
 module.exports = { quizData, questions };
