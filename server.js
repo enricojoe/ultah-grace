@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 
+app.set('views', './views');
 app.set("view engine", "ejs");
 
 app.use(express.static(__dirname + "/public"));
@@ -23,11 +24,11 @@ for (const file of quizFileDir) {
 
 // Routes
 app.get("/", (req, res) => {
-  res.render("index.ejs", { quizzes });
+  res.render("index", { quizzes });
 });
 
 app.get("/quiz", (req, res) => {
-  res.render("quiz.ejs", { query: req.query.name });
+  res.render("quiz", { query: req.query.name });
 });
 
 const port = 3000;
