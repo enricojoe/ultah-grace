@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./head'); %>
+    <script src="./data/<%= query %>.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="quiz-title">Quiz Title</h1>
+      <p class="correct-count hide">Correct:</p>
+      <h3 class="question hide">Question</h3>
+      
+      <div class="desc">
+        <h2 class="quiz-desc-title">Deskripsi</h2>
+        <p class="quiz-desc">Quiz Description</p>
+      </div>
+      
+      <div class="fail hide">
+        <h2>Mohon maaf, anda gagal...</h2>
+        <h3>Silahkan coba lagi</h3>
+      </div>
+
+      <div class="congrats hide">
+        <h2>Selamat anda menang.......</h2>
+        <div class="modal-container hidden">
+          <section class="modal hidden">
+            <div class="flex">
+              <button class="btn-close">⨉</button>
+            </div>
+            <div>
+              <h2>Selamat Ulang Tahun</h2>
+              <p>
+                Semoga di umur yang ke 23 ini...
+                <ul>
+                  <li>Bisa menjadi manusia yang lebih baik lagi.</li>
+                  <li>Semakin rajin dan mengurangi malas.</li>
+                  <li>Semakin banyak gerak dan mengurangi mager.</li>
+                  <li>Semakin sehat dan kurang penyakit.</li>
+                  <li>Semakin cepat dapat kerja.</li>
+                  <li>Semakin lembek kepalanya.</li>
+                  <li>Semakin mudah memaafkan.</li>
+                  <li>Semakin mudah mengakui kesalahan.</li>
+                  <li>Semua niat baik tercapai.</li>
+                  <li>Terjadi semua semua yang baik.</li>
+                </ul>
+                <p>
+                  Mohon maaf atas segala kekurangan yang saya miliki <br>
+                  Mohon maaf atas kurangnya modal dari hadiah ini <br>
+                  Semoga sedikit kuis ecek ecek dan ucapan ini berkenan di hati ❤️ <br>
+                  Terima Kasiih 🙏
+                </p>
+              </p>
+            </div>
+          </section>
+          <div class="overlay hidden"></div>
+        </div>
+        <button class="btn btn-open">Buka Ucapan</button>
+      </div>
+
+      <div class="q-container hide">
+        <div class="btn-grid">
+          <div class="option-btn">Q1</div>
+          <div class="option-btn">Q2</div>
+          <div class="option-btn">Q3</div>
+          <div class="option-btn">Q4</div>
+        </div>
+      </div>
+      <div class="btn-container">
+        <button class="start-btn">Mulai</button>
+        <button class="next-btn hide">Lanjut</button>
+      </div>
+    </div>
+    <script src="./quizRenderer.js"></script>
+  </body>
+</html>
